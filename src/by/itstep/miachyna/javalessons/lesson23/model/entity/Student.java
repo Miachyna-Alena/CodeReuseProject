@@ -75,7 +75,7 @@ public class Student extends Human {
         note.setMark(mark);
     }
 
-    public String getInfo() {
+    public String toString() {
 //        return "Student: " + name
 //                + "\nAge: " + age
 //                + "\nMark: " + mark
@@ -86,7 +86,7 @@ public class Student extends Human {
 //                + "\nMark: " + mark
 //                + "\nIs he/she alive? --> " + (isAlive() ? "YES" : "NO")
 //                + "\n";
-        return "Student: " + super.getInfo()
+        return "Student: " + super.toString()
                 + "\nMark: " + note.getMark()
                 + "\n";
     }

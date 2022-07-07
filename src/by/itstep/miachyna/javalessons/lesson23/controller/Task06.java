@@ -26,9 +26,9 @@ public class Task06 {
         MarkNote note = new MarkNote();
 
         Student student01 = new Student("Alex", 20, note, true);
-        System.out.println(student01.getInfo());
+        System.out.println(student01.toString());
 
         Student student02 = new Student("Alex", 20, note, true);
-        System.out.println(student02.getInfo());
+        System.out.println(student02.toString());
     }
 }

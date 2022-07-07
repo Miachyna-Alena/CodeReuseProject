@@ -6,12 +6,12 @@ public class Task02 {
     public static void main(String[] args) {
         Student student = new Student("Alex", 20, 4, true);
         student.setMark(8);
-        System.out.println(student.getInfo());
+        System.out.println(student.toString());
 
         student.setMark(20);
-        System.out.println(student.getInfo());
+        System.out.println(student.toString());
 
         student.setMark(-50);
-        System.out.println(student.getInfo());
+        System.out.println(student.toString());
     }
 }
