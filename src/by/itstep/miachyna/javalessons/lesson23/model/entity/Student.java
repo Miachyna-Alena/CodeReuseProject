@@ -10,31 +10,31 @@ public class Student extends Human{
 
     // default constructor (with no args)
     public Student() {
-//        name = "no name";
-//        age = 16;
+        name = "no name";
+        age = 16;
         mark = 4;
-//        alive = true;
+        alive = true;
     }
 
     // full constructor with params/args
     public Student(String name, int age, double mark, boolean alive) {
-//        this.name = name;
-//        this.age = age;
-//        this.alive = alive;
+        this.name = name;
+        this.age = age;
+        this.alive = alive;
 
-        setName(name);
-        setAge(age);
-        setAlive(alive);
+//        setName(name);
+//        setAge(age);
+//        setAlive(alive);
 
         this.mark = mark;
     }
 
     // copy-constructor
     public Student(Student student) {
-//        name = student.name;
-//        age = student.age;
+        name = student.name;
+        age = student.age;
         mark = student.mark;
-//        alive = student.alive;
+        alive = student.alive;
     }
 
 //    public void setAge(int age) {
@@ -54,15 +54,15 @@ public class Student extends Human{
     }
 
     public String getInfo() {
-//        return "Student: " + name
-//                + "\nAge: " + age
-//                + "\nMark: " + mark
-//                + "\nIs he/she alive? --> " + (alive ? "YES" : "NO")
-//                + "\n";
-        return "Student: " + getName()
-                + "\nAge: " + getAge()
+        return "Student: " + name
+                + "\nAge: " + age
                 + "\nMark: " + mark
-                + "\nIs he/she alive? --> " + (isAlive() ? "YES" : "NO")
+                + "\nIs he/she alive? --> " + (alive ? "YES" : "NO")
                 + "\n";
+//        return "Student: " + getName()
+//                + "\nAge: " + getAge()
+//                + "\nMark: " + mark
+//                + "\nIs he/she alive? --> " + (isAlive() ? "YES" : "NO")
+//                + "\n";
     }
 }

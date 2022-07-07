@@ -7,13 +7,13 @@ public class Worker extends Human {
     }
 
     public Worker(String name, int age, double salary, boolean alive) {
-//        this.name = name;
-//        this.age = age;
-//        this.alive = alive;
+        this.name = name;
+        this.age = age;
+        this.alive = alive;
 
-        setName(name);
-        setAge(age);
-        setAlive(alive);
+//        setName(name);
+//        setAge(age);
+//        setAlive(alive);
 
         this.salary = salary;
     }
@@ -27,15 +27,15 @@ public class Worker extends Human {
     }
 
     public String getInfo() {
-//        return "Worker: " + name
-//                + "\nAge: " + age
-//                + "\nSalary: " + salary
-//                + "\nIs he/she alive? --> " + (alive ? "YES" : "NO")
-//                + "\n";
-        return "Worker: " + getName()
-                + "\nAge: " + getAge()
+        return "Worker: " + name
+                + "\nAge: " + age
                 + "\nSalary: " + salary
-                + "\nIs he/she alive? --> " + (isAlive() ? "YES" : "NO")
+                + "\nIs he/she alive? --> " + (alive ? "YES" : "NO")
                 + "\n";
+//        return "Worker: " + getName()
+//                + "\nAge: " + getAge()
+//                + "\nSalary: " + salary
+//                + "\nIs he/she alive? --> " + (isAlive() ? "YES" : "NO")
+//                + "\n";
     }
 }
