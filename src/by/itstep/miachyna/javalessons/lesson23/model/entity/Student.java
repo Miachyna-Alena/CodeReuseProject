@@ -1,31 +1,30 @@
 package by.itstep.miachyna.javalessons.lesson23.model.entity;
 
 public class Student extends Human{
-    public static final int MIN_MARK = 0;
-    public static final int MAX_MARK = 10;
+
     public static final int MIN_STUDENT_AGE = 16;
     public static final int MAX_STUDENT_AGE = 65;
 
-    private double mark;
+    private MarkNote note;
 
     private String name;
 
     // default constructor (with no args)
     public Student() {
         super();
-        System.out.println("Student default constructor");
+        // System.out.println("Student default constructor");
 
         name = "Botan";
         super.name = "no name";
         age = 16;
-        mark = 4;
+        note = new MarkNote();
         alive = true;
     }
 
     // full constructor with params/args
     public Student(String name, int age, double mark, boolean alive) {
         super(name, age, alive);
-        System.out.println("Student full constructor");
+        //System.out.println("Student full constructor");
 
 //        this.name = name;
 //        this.age = age;
@@ -35,7 +34,7 @@ public class Student extends Human{
 //        setAge(age);
 //        setAlive(alive);
 
-        this.mark = mark;
+        note = new MarkNote(mark);
     }
 
     // copy-constructor
@@ -44,7 +43,7 @@ public class Student extends Human{
 
         name = student.name;
         age = student.age;
-        mark = student.mark;
+        note = new MarkNote(student.note.getMark());
         alive = student.alive;
     }
 
@@ -55,13 +54,11 @@ public class Student extends Human{
 //    }
 
     public double getMark() {
-        return mark;
+        return note.getMark();
     }
 
     public void setMark(double mark) {
-        if (mark >= MIN_MARK && mark <= MAX_MARK) {
-            this.mark = mark;
-        }
+        note.setMark(mark);
     }
 
     public String getInfo() {
@@ -76,7 +73,7 @@ public class Student extends Human{
 //                + "\nIs he/she alive? --> " + (isAlive() ? "YES" : "NO")
 //                + "\n";
         return "Student: " + super.getInfo()
-                + "\nMark: " + mark
+                + "\nMark: " + note.getMark()
                 + "\n";
     }
 }

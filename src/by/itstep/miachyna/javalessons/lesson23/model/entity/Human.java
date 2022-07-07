@@ -7,13 +7,13 @@ public class Human extends Object{
 
     public Human() {
         // super();
-        System.out.println("Human default constructor");
+        // System.out.println("Human default constructor");
         // init state
     }
 
     public Human(String name, int age, boolean alive) {
         // this();
-        System.out.println("Human full constructor");
+        // System.out.println("Human full constructor");
 
         this.name = name;
         this.age = age;
@@ -45,7 +45,7 @@ public class Human extends Object{
     }
 
     public String getInfo(){
-        return name + ": age = " + age
-                + ", is alive = " + (alive ? "yes" : "no");
+        return name + "\nAge: " + age
+                + "\nIs he/she alive? --> " + (isAlive() ? "YES" : "NO");
     }
 }
