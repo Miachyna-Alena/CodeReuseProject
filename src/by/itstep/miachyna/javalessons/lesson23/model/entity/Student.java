@@ -1,6 +1,6 @@
 package by.itstep.miachyna.javalessons.lesson23.model.entity;
 
-public class Student extends Human{
+public class Student extends Human {
 
     public static final int MIN_STUDENT_AGE = 16;
     public static final int MAX_STUDENT_AGE = 65;
@@ -37,6 +37,12 @@ public class Student extends Human{
         note = new MarkNote(mark);
     }
 
+    public Student(String name, int age, MarkNote note, boolean alive) {
+        super(name, age, alive);
+        this.note = note;
+    }
+
+
     // copy-constructor
     public Student(Student student) {
         super();
@@ -45,6 +51,14 @@ public class Student extends Human{
         age = student.age;
         note = new MarkNote(student.note.getMark());
         alive = student.alive;
+    }
+
+    public MarkNote getNote() {
+        return note;
+    }
+
+    public void setNote(MarkNote note) {
+        this.note = note;
     }
 
 //    public void setAge(int age) {
